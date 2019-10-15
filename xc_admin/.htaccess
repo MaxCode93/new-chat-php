@@ -1,0 +1,56 @@
+<IfModule mod_rewrite.c>
+    <IfModule mod_negotiation.c>
+        Options -MultiViews -Indexes
+    </IfModule>
+	
+    RewriteEngine on
+	
+    RewriteRule ^login$ login.php [L]
+    RewriteRule ^escritorio$ index.php [L]
+    RewriteRule ^config$ modulos/config/configuration.php [L]
+    RewriteRule ^config_site$ modulos/config/config_site.php [L]
+	RewriteRule ^update$ modulos/update/update.php [L]
+
+    RewriteRule ^files$ modulos/files/files.php [L] 
+    RewriteRule ^files_delete$ modulos/files/files_delete.php [L] 
+
+    RewriteRule ^logs_adm$ modulos/logs/logs_adm.php [L] 
+    RewriteRule ^logs_access$ modulos/logs/logs_access.php [L]
+
+    RewriteRule ^about$ a_de.php [L]
+    RewriteRule ^salir$ logout.php [L] 
+
+    RewriteRule ^users$ modulos/user/users.php [L]
+    RewriteRule ^users_edit$ modulos/user/users_edit.php [L]
+    RewriteRule ^users_del_thumb$ modulos/user/del_us_thumb.php [L]
+    RewriteRule ^users_delete$ modulos/user/users_delete.php [L]
+    RewriteRule ^users_desban$ modulos/user/users_desban.php [L]
+    RewriteRule ^ban_users$ modulos/user/users_ban.php [L]
+    RewriteRule ^act_view$ modulos/user/user_act_view.php [L] 
+    RewriteRule ^act$ modulos/user/user_act.php [L] 
+    RewriteRule ^export_users$ modulos/user/users_export.php [L] 
+
+    RewriteRule ^adm$ modulos/admin/admin_view.php [L]
+    RewriteRule ^adm_del$ modulos/admin/admin_delete.php [L]
+    RewriteRule ^acp$ modulos/admin/acp_view.php [L]
+
+    RewriteRule ^messages$ modulos/messages/messages.php [L]
+    RewriteRule ^message_delete$ modulos/messages/message_delete.php [L]
+    RewriteRule ^message_delete_all$ modulos/messages/del_all_mess.php [L]
+
+    RewriteRule ^email$ email.php [L]
+
+    RewriteRule ^clear_enteruser$ modulos/logs/proses.php?accion=clear_enteruser [L]
+    RewriteRule ^clear_admlog$ modulos/logs/proses.php?accion=clear_admlog [L]
+    RewriteRule ^clear_anuncioslog$ modulos/logs/proses.php?accion=clear_anuncioslog [L]
+    RewriteRule ^clear_mudolog$ modulos/logs/proses.php?accion=clear_mudolog [L]
+    RewriteRule ^clear_afail$ modulos/logs/proses.php?accion=clear_afail [L]
+    RewriteRule ^clear_error$ modulos/logs/proses.php?accion=clear_error [L]
+
+    # Errores 404
+    RewriteRule ^404$ 404.php [L]
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule .*$ 404.php [NC,L]
+	
+</IfModule>

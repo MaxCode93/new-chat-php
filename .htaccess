@@ -1,0 +1,26 @@
+#
+# XenCuba
+# Powered By Maxwell
+# 
+
+<Files .htaccess>
+ order allow,deny
+ deny from all
+</Files>
+
+Options +FollowSymLinks
+RewriteEngine on
+RewriteRule ^admin$ xc_admin [NC]
+RewriteRule ^registro$ signup.php [NC]
+
+# Errores 
+
+ErrorDocument 400 "<style type='text/css'> body{font-family: sans-serif; background: #fff; } .error_page_btn{display: inline-block; background: whitesmoke; padding: 8px; border-radius: 3px; color: #6b6b6b; text-decoration: none; box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.05); transition: background 0.1s , color 0.1s; } .error_page_btn:hover, .error_page_btn:focus{ background: #4a708e; color: #fff; text-decoration: none; } .error_div{ padding: 15px; max-width: 800px; color: #383838; box-shadow: none; border: 1px solid rgba(169, 169, 169, 0.36); } </style> <div align='center' style='margin-top: 150px;margin-bottom: 150px;'> <div class='post error_div' align='center'> <h1><span class='fa fa-exclamation-triangle' style='color: gold;'></span> 400 Bad Request - Invalid URL</h1> <br> <a href='javascript:history.back()' class='error_page_btn'>Back to a previous page</a> </div></div>"
+
+ErrorDocument 401 "<style type='text/css'> body{font-family: sans-serif; background: #fff; } .error_page_btn{display: inline-block; background: whitesmoke; padding: 8px; border-radius: 3px; color: #6b6b6b; text-decoration: none; box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.05); transition: background 0.1s , color 0.1s; } .error_page_btn:hover, .error_page_btn:focus{ background: #4a708e; color: #fff; text-decoration: none; } .error_div{ padding: 15px; max-width: 800px; color: #383838; box-shadow: none; border: 1px solid rgba(169, 169, 169, 0.36); } </style> <div align='center' style='margin-top: 150px;margin-bottom: 150px;'> <div class='post error_div' align='center'> <h1><span class='fa fa-exclamation-triangle' style='color: gold;'></span> 401 Not Authorized</h1> <h3>The requested resource requires user authentication</h3><br> <a href='javascript:history.back()' class='error_page_btn'>Back to a previous page</a> </div></div>"
+
+ErrorDocument 403 "<style type='text/css'> body{font-family: sans-serif; background: #fff; } .error_page_btn{display: inline-block; background: whitesmoke; padding: 8px; border-radius: 3px; color: #6b6b6b; text-decoration: none; box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.05); transition: background 0.1s , color 0.1s; } .error_page_btn:hover, .error_page_btn:focus{ background: #4a708e; color: #fff; text-decoration: none; } .error_div{ padding: 15px; max-width: 800px; color: #383838; box-shadow: none; border: 1px solid rgba(169, 169, 169, 0.36); } </style> <div align='center' style='margin-top: 150px;margin-bottom: 150px;'> <div class='post error_div' align='center'> <h1><span class='fa fa-exclamation-triangle' style='color: gold;'></span> 403 Acceso Denegado</h1> <h3>Usted no tiene permitido el acceso a esta parte del sitio!</h3><br> <a href='javascript:history.back()' class='error_page_btn'>Regresar</a> </div></div>"
+
+ErrorDocument 404 "<style type='text/css'> body{font-family: sans-serif; background: #fff; } .error_page_btn{display: inline-block; background: whitesmoke; padding: 8px; border-radius: 3px; color: #6b6b6b; text-decoration: none; box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.05); transition: background 0.1s , color 0.1s; } .error_page_btn:hover, .error_page_btn:focus{ background: #4a708e; color: #fff; text-decoration: none; } .error_div{ padding: 15px; max-width: 800px; color: #383838; box-shadow: none; border: 1px solid rgba(169, 169, 169, 0.36); } </style> <div align='center' style='margin-top: 150px;margin-bottom: 150px;'> <div class='post error_div' align='center'> <h1><span class='fa fa-exclamation-triangle' style='color: gold;'></span> 404 Pagina No Encontrada</h1> <h3>La pagina que buscas no existe en nuestro sitio!</h3><br> <a href='javascript:history.back()' class='error_page_btn'>Regresar</a> </div></div>"
+
+ErrorDocument 500 "<style type='text/css'> body{font-family: sans-serif; background: #fff; } .error_page_btn{display: inline-block; background: whitesmoke; padding: 8px; border-radius: 3px; color: #6b6b6b; text-decoration: none; box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.05); transition: background 0.1s , color 0.1s; } .error_page_btn:hover, .error_page_btn:focus{ background: #4a708e; color: #fff; text-decoration: none; } .error_div{ padding: 15px; max-width: 800px; color: #383838; box-shadow: none; border: 1px solid rgba(169, 169, 169, 0.36); } </style> <div align='center' style='margin-top: 150px;margin-bottom: 150px;'> <div class='post error_div' align='center'> <h1><span class='fa fa-exclamation-triangle' style='color: gold;'></span> 500 Internal Server</h1> <h3>Sorry ,There is a problem with the resource you are looking for,<br>And it cannot be displayed</h3><br> <a href='javascript:history.back()' class='error_page_btn'>Back to a previous page</a> </div></div>"

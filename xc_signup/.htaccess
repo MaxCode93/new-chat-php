@@ -1,0 +1,6 @@
+Options +FollowSymLinks
+RewriteEngine on
+RewriteRule ^registro$ register.php [L] 
+RewriteRule ^activar$ AccountActive.php [L] 
+RewriteRule ^new_code$ re_activar.php [L] 
+
